@@ -16,7 +16,7 @@ public class HUD {
 //    Viewport viewport;
 
     int score=0,life=3;
-    float time=60;
+    float time=30;
 
 
     Label.LabelStyle style =new Label.LabelStyle(new BitmapFont(), WHITE);
@@ -34,6 +34,10 @@ public class HUD {
         Label lifeLabel = new Label("LIfe",style);
         Label timeLabel = new Label("Time",style);
 
+        scoreLabel.setFontScale(2);
+        lifeLabel.setFontScale(2);
+         timeLabel.setFontScale(2);
+
         table.setFillParent(true);
         table.top();
         table.add(scoreLabel).expandX();
@@ -41,9 +45,10 @@ public class HUD {
         table.add(timeLabel).expandX();
 
         table.row();
-        table.add(scorevar).expandX();
+        table.add(scorevar).expandX().size(2);
         table.add(lifevar).expandX();
         table.add(timevar).expandX();
+
 
         stage.addActor(table);
 

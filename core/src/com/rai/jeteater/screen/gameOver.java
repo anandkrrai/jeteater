@@ -52,26 +52,27 @@ this.hud=hud;
 
         message="Game over!!!!\nYour score is:"+ finalscore + "\nREPLAY??";
         Table table = new Table();
+
         Label.LabelStyle style =new Label.LabelStyle(new BitmapFont(), WHITE);
         Label over = new Label(message,style);
         Label yes = new Label("TILT BOTTOM RIGHT \n PLAY AGAIN,\n ",style);
         Label no = new Label("TILT TOP LEFT \n  TO EXIT\n",style);
-        no.setFontScale(5);
-        yes.setFontScale(5);
-        over.setFontScale(5);
+        no.setFontScale(6);
+        yes.setFontScale(6);
+        over.setFontScale(6);
         table.setFillParent(true);
         table.center();
-        table.add(over ).expandX();
+        table.add(over ).size(4);
 
-        table.add(yes).expandX();
+        table.add(yes).expandX().size(10);
 
-        table.add(no).expandX();
+        table.add(no).expandX().size(10);
 
         table.row();
-        table.add(over).expandX();
-        table.add(yes).expandX();
+        table.add(over).expandX().size(10);
+        table.add(yes).expandX().size(10);
 
-        table.add(no).expandX();
+        table.add(no).expandX().size(10);
        stage.addActor(table);
     }
 
