@@ -18,7 +18,7 @@ public class Coins extends Sprite {
             relocate();
     }
 
-    private void relocate() {
+    public void relocate() {
         int x= (int)(Math.random() * (jeteater.WIDTH-50));
         int y= (int)(Math.random() * (jeteater.HEIGHT-50));
         setPosition(x,y);

@@ -18,7 +18,7 @@ public class Bomb extends Sprite {
             relocate();
     }
 
-    private void relocate() {
+    public void relocate() {
         int x= (int)(Math.random() * jeteater.WIDTH);
         int y= (int)(Math.random() * jeteater.HEIGHT);
         setPosition(x,y);

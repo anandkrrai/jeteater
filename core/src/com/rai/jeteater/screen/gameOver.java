@@ -57,22 +57,22 @@ this.hud=hud;
         Label over = new Label(message,style);
         Label yes = new Label("TILT BOTTOM RIGHT \n PLAY AGAIN,\n ",style);
         Label no = new Label("TILT TOP LEFT \n  TO EXIT\n",style);
-        no.setFontScale(6);
-        yes.setFontScale(6);
-        over.setFontScale(6);
+        no.setFontScale(3);
+        yes.setFontScale(3);
+        over.setFontScale(3);
         table.setFillParent(true);
         table.center();
-        table.add(over ).size(4);
+        table.add(over );
 
-        table.add(yes).expandX().size(10);
+        table.add(yes).expandX();
 
-        table.add(no).expandX().size(10);
+        table.add(no).expandX();
 
         table.row();
-        table.add(over).expandX().size(10);
-        table.add(yes).expandX().size(10);
+        table.add(over).expandX();
+        table.add(yes).expandX();
 
-        table.add(no).expandX().size(10);
+        table.add(no).expandX();
        stage.addActor(table);
     }
 

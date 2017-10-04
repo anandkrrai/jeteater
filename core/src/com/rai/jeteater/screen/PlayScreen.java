@@ -101,6 +101,7 @@ public class PlayScreen implements Screen {
         jet.draw(jeteater.batch);
 
         jeteater.batch.setProjectionMatrix(hud.stage.getCamera().combined);
+
         hud.stage.draw();
 
 
@@ -165,12 +166,21 @@ public class PlayScreen implements Screen {
     private void handleEvent() {
         int kill=99,score;
         for(Bomb bom:bomb){
+
             if(bom.checkHit(jet)){
+                for(Bomb bom1:bomb)
+                    bom1.relocate();
+                for(Coins coin1:coins)
+                    coin1.relocate();
                 kill=hud.kill();
             }
         }
         for(Coins coin:coins){
            if(coin.checkHit(jet)){
+               for(Coins coin1:coins)
+                   coin1.relocate();
+               for(Bomb bom1:bomb)
+                   bom1.relocate();
                score=hud.addScore(10);
            }
         }
