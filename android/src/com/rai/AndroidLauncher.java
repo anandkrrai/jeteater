@@ -38,12 +38,12 @@ public class AndroidLauncher extends AndroidApplication implements AdService {
 
 		game.addView(v);
 
-		MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+			MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
 
 		adview.loadAd(new AdRequest.Builder().build());
 
 		mInterstitialAd = new InterstitialAd(this);
-		mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+		mInterstitialAd.setAdUnitId("ca-app-pub-2864759313591413/8425581019");
 
 		mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
