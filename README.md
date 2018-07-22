@@ -1,5 +1,8 @@
 # jeteater
-a basic 2D android game using libgdx 
+A basic 2D android game using libgdx 
+<br>
+<img src="jeteater.gif" width="40%">
+
 
 ## Getting Started
 
